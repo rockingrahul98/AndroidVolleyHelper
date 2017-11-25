@@ -2,24 +2,31 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "26.0.0"
-
-    defaultConfig {
-        minSdkVersion 10
-        targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+    buildToolsVersion '26.0.2'
 }
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'android-volley-helper'
 
+    publishedGroupId = 'com.dmax.android_volley_helper'
+    libraryName = 'AndroidVolleyHelper'
+    artifact = 'android-volley-helper'
+
+    libraryDescription = 'An Android library to easily use volley for network calls.'
+
+    siteUrl = 'https://github.com/rockingrahul98/AndroidVolleyHelper'
+    gitUrl = 'https://github.com/rockingrahul98/AndroidVolleyHelper.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'rockingrahul98'
+    developerName = 'Rahul Samaddar'
+    developerEmail = 'rockingrahul98@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    testCompile 'junit:junit:4.12'
 }
