@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'android-volley-helper'
@@ -38,5 +39,5 @@ dependencies {
     compile 'com.android.volley:volley:1.0.0'
 }
 
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+apply from: 'https://raw.githubusercontent.com/rockingrahul98/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/rockingrahul98/JCenter/master/bintrayv1.gradle'
