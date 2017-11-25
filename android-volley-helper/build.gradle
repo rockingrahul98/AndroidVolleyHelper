@@ -1,15 +1,4 @@
 apply plugin: 'com.android.library'
-
-android {
-    compileSdkVersion 24
-    buildToolsVersion '26.0.2'
-    defaultConfig {
-        minSdkVersion 10
-        targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
-    }
-}
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'android-volley-helper'
@@ -33,7 +22,21 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.volley:volley:1.0.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
