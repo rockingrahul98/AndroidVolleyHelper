@@ -52,19 +52,19 @@ public class MyContentHandler extends VolleyContentHandler {
 
         }
         String body = object.toString();
-        requestContent(requestListenerKey, requestTag, url, body);
+        super.requestContent(requestListenerKey, requestTag, url, body);
     }
 
     private void requestPostCallXFORMURLENCODE(HashMap<String, String> parameters, String requestListenerKey, String requestTag) {
         String url = "https://postman-echo.com/post";
         String body = getUrlEncodedBodyContent(parameters);
-        requestContent(requestListenerKey, requestTag, url, body, VolleyContentHandler.CONTENT_TYPE_XFORM_URLENCODED);
+        super.requestContent(requestListenerKey, requestTag, url, body, VolleyContentHandler.CONTENT_TYPE_XFORM_URLENCODED);
     }
 
     private void requestGetCall(HashMap<String, String> parameters, String requestListenerKey, String requestTag) {
         String getUrl = "https://postman-echo.com/get?";
-        String url = getUrl+getUrlEncodedBodyContent(parameters);
-        requestContent(requestListenerKey, requestTag, url);
+        String url = getUrl + getUrlEncodedBodyContent(parameters);
+        super.requestContent(requestListenerKey, requestTag, url);
     }
 
 
